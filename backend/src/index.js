@@ -6,6 +6,7 @@ import cors from "cors";
 
 import path from "path";
 
+
 import authRoutes from "./routes/auth.route.js"
 import messageRoutes from "./routes/message.route.js"
 import { app, server } from "./lib/soket.js";
@@ -16,7 +17,8 @@ const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 app.use(express.json()); //extract the json data from body auth controller
-app.use(cookieParser()); //it allow to grap the token from the cookie 
+app.use(cookieParser()); //it allow to grap the token from the cookie
+
 app.use(
     cors({
         origin: "http://localhost:5173",
